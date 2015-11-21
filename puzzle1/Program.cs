@@ -26,7 +26,11 @@ namespace puzzle1
 
         }
 
-
+        /// <summary>
+        /// Main function which returns the consecutive numbers 
+        /// </summary>
+        /// <param name="n">The input number</param>
+        /// <returns>Array  of  int which contains the consecutive numbers</returns>
         private static int[] findAdditionArray(int n)
         {
             
@@ -74,6 +78,14 @@ namespace puzzle1
             }
         }
 
+
+        /// <summary>
+        /// If consecutive numbers contains -ve numbers use this function 
+        /// This is a recursive function
+        /// </summary>
+        /// <param name="n">input number</param>
+        /// <param name="noOfIntergers">No of integers in the consecutive list</param>
+        /// <returns>array of consecutive numbers</returns>
         private static int[] negativeCondition(int n, int noOfIntergers)
         {
             int[] numbers = new int[noOfIntergers];
@@ -91,6 +103,12 @@ namespace puzzle1
                 return numbers;
         }
 
+
+        /// <summary>
+        /// To Check if number is an exponential of 2
+        /// </summary>
+        /// <param name="x">input number</param>
+        /// <returns></returns>
         private static bool expoftwo(int x)
         {
             return x > 0 && (x & (x - 1)) == 0;
@@ -110,6 +128,12 @@ namespace puzzle1
                 }
             return x;
         }
+
+        /// <summary>
+        /// If a number is oddprime
+        /// </summary>
+        /// <param name="x">input number</param>
+        /// <returns></returns>
         private static bool isoddPrime(int x)
         {
             if (x == 1) return false;
@@ -120,8 +144,7 @@ namespace puzzle1
             }
 
             return true;
-
         }
-        }
+       }
     
 }
